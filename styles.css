@@ -1,0 +1,30 @@
+.container {
+  display: flexbox;
+  flex-direction: column;
+  width: 120px;
+  height: 150px;
+  padding: 5%;
+  background-color: lightslategray;
+}
+
+.display {
+  height: 10px;
+  width: 60%;
+  background-color: beige;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  background-color: lavender;
+  height: auto;
+  width: auto;
+}
