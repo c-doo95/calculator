@@ -1,30 +1,60 @@
+body {
+  background-color: azure;
+  justify-content: center;
+}
+
 .container {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
-  width: 120px;
-  height: 150px;
+  width: 70%;
+  height: auto;
   padding: 5%;
   background-color: lightslategray;
+  aspect-ratio: 3/4;
+  gap: 5%;
 }
 
 .display {
-  height: 10px;
-  width: 60%;
+  height: 10%;
+  width: 90%;
   background-color: beige;
+  flex: auto;
+  align-self: center;
 }
 
 .btn-container {
   display: flex;
   flex-direction: column;
+  flex: auto;
+  width: auto;
+  height: 70%;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+  flex: auto;
+  width: 100%;
+  height: auto;
+  justify-content: center;
 }
 
 button {
   background-color: lavender;
+  width: 25%;
   height: auto;
-  width: auto;
+  aspect-ratio: 4/3;
+}
+
+.spacer {
+  display: flex;
+  flex:auto;
+  width: 25%;
+  height: auto;
+  aspect-ratio: 4/3;
+}
+
+button.dblSize {
+  aspect-ratio: 8/3;
+  width: 50%;
 }
