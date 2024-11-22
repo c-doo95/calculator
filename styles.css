@@ -1,6 +1,5 @@
 body {
   background-color: azure;
-  justify-content: center;
 }
 
 .container {
@@ -16,7 +15,7 @@ body {
 
 .display {
   height: 10%;
-  width: 90%;
+  width: 100%;
   background-color: beige;
   flex: auto;
   align-self: center;
@@ -36,7 +35,6 @@ body {
   flex: auto;
   width: 100%;
   height: auto;
-  justify-content: center;
 }
 
 button {
@@ -54,7 +52,7 @@ button {
   aspect-ratio: 4/3;
 }
 
-button.dblSize {
+.dblSize {
   aspect-ratio: 8/3;
   width: 50%;
 }
