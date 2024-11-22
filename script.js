@@ -13,14 +13,17 @@ function resolve() {
   switch (operator) {
     case '+':
       result = Number(a) + Number(b);
+      display.textContent = result;
       console.log(result);
       break;
     case '-':
       result = Number(a) - Number(b);
+      display.textContent = result;
       console.log(result);
       break;
     case '*':
       result = Number(a) * Number(b);
+      display.textContent = result;
       console.log(result);
       break;
     case '/':
@@ -29,6 +32,7 @@ function resolve() {
         clear();
       } else {
         result = Number(a) / Number(b);
+        display.textContent = result;
         console.log(result);
       };
       break;    
@@ -40,15 +44,18 @@ function clear() {
   b = '';
   operator = '';
   result = '';
+  display.textContent = '';
 };
 
 numerals.forEach((numeral) => {
   numeral.addEventListener('click', () => {
     if (operator === '') {
       a += numeral.id;
+      display.textContent = a;
       console.log(a);
     } else {
       b += numeral.id;
+      display.textContent = b;
       console.log(b);
     };    
   });

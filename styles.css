@@ -15,10 +15,15 @@ body {
 
 .display {
   height: 10%;
-  width: 100%;
+  width: 90%;
   background-color: beige;
   flex: auto;
+  padding: 5%;
   align-self: center;
+  font-size: 7vw;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: end;
+  align-content: center;
 }
 
 .btn-container {
