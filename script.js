@@ -9,6 +9,39 @@ let b = '';
 let operator = '';
 let result = '';
 
+function resolve() {
+  switch (operator) {
+    case '+':
+      result = Number(a) + Number(b);
+      console.log(result);
+      break;
+    case '-':
+      result = Number(a) - Number(b);
+      console.log(result);
+      break;
+    case '*':
+      result = Number(a) * Number(b);
+      console.log(result);
+      break;
+    case '/':
+      if (Number(b) === 0) {
+        alert("ERROR: Do not divide by zero");
+        clear();
+      } else {
+        result = Number(a) / Number(b);
+        console.log(result);
+      };
+      break;    
+  };
+};
+
+function clear() {
+  a = '';
+  b = '';
+  operator = '';
+  result = '';
+};
+
 numerals.forEach((numeral) => {
   numeral.addEventListener('click', () => {
     if (operator === '') {
@@ -40,29 +73,5 @@ eqlBtn.addEventListener('click', () => {
 });
 
 clearBtn.addEventListener('click', () => {
-  a = '';
-  b = '';
-  operator = '';
-  result = '';
+  clear();
 });
-
-function resolve() {
-  switch (operator) {
-    case '+':
-      result = Number(a) + Number(b);
-      console.log(result);
-      break;
-    case '-':
-      result = Number(a) - Number(b);
-      console.log(result);
-      break;
-    case '*':
-      result = Number(a) * Number(b);
-      console.log(result);
-      break;
-    case '/':
-      result = Number(a) / Number(b);
-      console.log(result);
-      break;    
-  };
-};
