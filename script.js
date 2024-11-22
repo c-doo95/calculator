@@ -4,6 +4,7 @@ const decimal = document.querySelector('.decimal');
 const opBtns = document.querySelectorAll('.operator');
 const eqlBtn = document.getElementById('=');
 const clearBtn = document.querySelector('#clear');
+const bkBtn = document.querySelector('.backspace'); 
 
 let a = '';
 let b = '';
@@ -56,6 +57,18 @@ function clear() {
   display.textContent = '';
 };
 
+function backspace() {
+  if (operator === '' && b === '') {
+    a = a.slice(0, -1);
+    display.textContent = a;
+  } else if (operator !== '' && b === '') {
+    operator = '';
+  } else {
+    b = b.slice(0, -1);
+    display.textContent = b;
+  };
+};
+
 numerals.forEach((numeral) => {
   numeral.addEventListener('click', () => {
     if (operator === '') {
@@ -106,4 +119,8 @@ eqlBtn.addEventListener('click', () => {
 
 clearBtn.addEventListener('click', () => {
   clear();
+});
+
+bkBtn.addEventListener('click', () => {
+  backspace();
 });
