@@ -13,17 +13,23 @@ function resolve() {
   switch (operator) {
     case '+':
       result = Number(a) + Number(b);
+      result = Math.round(result * 10**5) / 10**5;
       display.textContent = result;
+      a = result;
       console.log(result);
       break;
     case '-':
       result = Number(a) - Number(b);
       display.textContent = result;
+      result = Math.round(result * 10**5) / 10**5;
+      a = result;
       console.log(result);
       break;
     case '*':
       result = Number(a) * Number(b);
       display.textContent = result;
+      result = Math.round(result * 10**5) / 10**5;
+      a = result;
       console.log(result);
       break;
     case '/':
@@ -32,7 +38,9 @@ function resolve() {
         clear();
       } else {
         result = Number(a) / Number(b);
+        result = Math.round(result * 10**5) / 10**5;
         display.textContent = result;
+        a = result;
         console.log(result);
       };
       break;    
