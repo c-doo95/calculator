@@ -4,7 +4,8 @@ const decimal = document.querySelector('.decimal');
 const opBtns = document.querySelectorAll('.operator');
 const eqlBtn = document.getElementById('=');
 const clearBtn = document.querySelector('#clear');
-const bkBtn = document.querySelector('.backspace'); 
+const bkBtn = document.querySelector('.backspace');
+const posNegBtn = document.querySelector('.posNeg'); 
 
 let a = '';
 let b = '';
@@ -69,6 +70,26 @@ function backspace() {
   };
 };
 
+function posNeg() {
+  if (operator === '' && b === '') {
+    if (a.slice(0, 1) !== '-') {
+      a = '-' + a;
+      display.textContent = a;
+    } else {
+      a = a.slice(1);
+      display.textContent = a;
+    };
+  } else {
+    if (b.slice(0, 1) !== '-') {
+      b = '-' + b;
+      display.textContent = b;
+    } else {
+      b = b.slice(1);
+      display.textContent = b;
+    };
+  }
+};
+
 numerals.forEach((numeral) => {
   numeral.addEventListener('click', () => {
     if (operator === '') {
@@ -123,4 +144,8 @@ clearBtn.addEventListener('click', () => {
 
 bkBtn.addEventListener('click', () => {
   backspace();
+});
+
+posNegBtn.addEventListener('click', () => {
+  posNeg();
 });
