@@ -15,7 +15,15 @@ numerals.forEach((numeral) => {
 const opBtns = document.querySelectorAll('.operator');
 opBtns.forEach((opBtn) => {
   opBtn.addEventListener('click', () => {
+    if (operator === '') {
     operator = opBtn.id;
+    } else {
+      resolve();
+      a = result;
+      b = '';
+      result = '';
+      operator = opBtn.id;
+    };
   });
 })
 
