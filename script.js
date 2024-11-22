@@ -1,5 +1,14 @@
 const display = document.querySelector('.display');
 const numerals = document.querySelectorAll('.numeral');
+const opBtns = document.querySelectorAll('.operator');
+const eqlBtn = document.getElementById('=');
+const clearBtn = document.querySelector('#clear');
+
+let a = '';
+let b = '';
+let operator = '';
+let result = '';
+
 numerals.forEach((numeral) => {
   numeral.addEventListener('click', () => {
     if (operator === '') {
@@ -12,7 +21,6 @@ numerals.forEach((numeral) => {
   });
 });
 
-const opBtns = document.querySelectorAll('.operator');
 opBtns.forEach((opBtn) => {
   opBtn.addEventListener('click', () => {
     if (operator === '') {
@@ -27,23 +35,16 @@ opBtns.forEach((opBtn) => {
   });
 })
 
-const eqlBtn = document.getElementById('=');
 eqlBtn.addEventListener('click', () => {
   resolve();
 });
 
-const clearBtn = document.querySelector('#clear');
 clearBtn.addEventListener('click', () => {
   a = '';
   b = '';
   operator = '';
   result = '';
 });
-
-let a = '';
-let b = '';
-let operator = '';
-let result = '';
 
 function resolve() {
   switch (operator) {
