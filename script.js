@@ -1,5 +1,6 @@
 const display = document.querySelector('.display');
 const numerals = document.querySelectorAll('.numeral');
+const decimal = document.querySelector('.decimal');
 const opBtns = document.querySelectorAll('.operator');
 const eqlBtn = document.getElementById('=');
 const clearBtn = document.querySelector('#clear');
@@ -67,6 +68,22 @@ numerals.forEach((numeral) => {
       console.log(b);
     };    
   });
+});
+
+decimal.addEventListener('click', () => {
+  if (operator === '') {
+    if (Number.isInteger(Number(a))) {
+      a += decimal.id;
+      display.textContent = a;
+      console.log(a);
+    }
+  } else {
+    if (Number.isInteger(Number(b))) {
+      b += decimal.id;
+      display.textContent = b;
+      console.log(b);
+    }
+  };
 });
 
 opBtns.forEach((opBtn) => {
